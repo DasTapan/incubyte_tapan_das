@@ -5,7 +5,8 @@ class StringCalculator
         else
             nums = str.split(/[\n,]/).map(&:to_i) 
             if check_negativity(nums)
-                raise StandardError, "negative number not allowed"
+                negatives = nums.select {|i| i.negative?}.join(",")
+                raise StandardError, "negative number not allowed #{negatives}"
             else
                 if nums.length == 1
                     nums[0]

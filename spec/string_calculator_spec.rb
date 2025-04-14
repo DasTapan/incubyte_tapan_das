@@ -36,10 +36,10 @@ describe StringCalculator do
 
         it "exception raised for negative numbers" do
             string_calculator = StringCalculator.new
-            expect { string_calculator.add("1,-2,3") }.to raise_error("negative number not allowed")
-            expect { string_calculator.add("11,11,0,-2") }.to raise_error("negative number not allowed")
-            expect { string_calculator.add("1\n,2,\n,0,-2\n9") }.to raise_error("negative number not allowed")
-            expect { string_calculator.add("10,10,-40") }.to raise_error("negative number not allowed")
+            expect { string_calculator.add("1,-2,3") }.to raise_error("negative number not allowed -2")
+            expect { string_calculator.add("11,11,0,-2") }.to raise_error("negative number not allowed -2")
+            expect { string_calculator.add("1\n,2,\n,0,-2\n9") }.to raise_error("negative number not allowed -2")
+            expect { string_calculator.add("10,10,-40,-9,-5") }.to raise_error("negative number not allowed -40,-9,-5")
         end
         
     end
