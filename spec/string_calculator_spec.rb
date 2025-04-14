@@ -25,5 +25,11 @@ describe StringCalculator do
             expect(string_calculator.add("10,,10,-40")).to eql(-20)
             expect(string_calculator.add("1,1,1,1,6")).to eql(10)
         end        
+
+        it "handle new line in splitting the string" do
+            string_calculator = StringCalculator.new
+            expect(string_calculator.add("1\n,2,\n,0,-2\n9")).to eql(10)
+        end
+
     end
 end

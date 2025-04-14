@@ -3,11 +3,11 @@ class StringCalculator
         if str == ""
             0
         else
-            nums = str.split(",") 
+            nums = str.split(/[\n,]/).map(&:to_i) 
             if nums.length == 1
-                nums[0].to_i
+                nums[0]
             else
-                nums.reduce(0) {|sum, num| sum + num.to_i}
+                nums.reduce(0) {|sum, num| sum + num}
             end
         end
     end
