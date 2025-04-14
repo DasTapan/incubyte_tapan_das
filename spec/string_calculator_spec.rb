@@ -6,5 +6,10 @@ describe StringCalculator do
             string_calculator = StringCalculator.new
             expect(string_calculator.add("")).to eql(0)
         end
+
+        it "returns the number when only one is there" do
+            string_calculator = StringCalculator.new
+            expect(string_calculator.add("11")).to eql(11)
+        end
     end
 end
