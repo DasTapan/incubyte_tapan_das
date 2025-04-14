@@ -31,5 +31,10 @@ describe StringCalculator do
             expect(string_calculator.add("1\n,2,\n,0,-2\n9")).to eql(10)
         end
 
+        it "handle dynamic delimiter" do
+            string_calculator = StringCalculator.new
+            expect(string_calculator.add("//$\n1$2$3$0")).to eql(6)
+        end
+
     end
 end
