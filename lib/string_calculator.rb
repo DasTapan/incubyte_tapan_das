@@ -3,7 +3,12 @@ class StringCalculator
         if str == ""
             0
         else
-            str.to_i
+            nums = str.split(",") 
+            if nums.length == 1
+                nums[0].to_i
+            else
+                nums.reduce(0) {|sum, num| sum + num.to_i}
+            end
         end
     end
 end
